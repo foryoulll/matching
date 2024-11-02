@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相手のプロフィール</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/common_stylesheet.css">
+    <link rel="stylesheet" href="css/my_profile_stylesheet.css">
+</head>
+<body>
+    <header>
+        <a href="home.html">
+            <img src="image/logo/logo.png" alt="アプリのロゴ" class="header-logo"> <!-- 画像をヘッダーに追加 -->
+        </a>
+    </header>
+    <main>
+        <div class="edit">
+            <button class="edit-button">
+                <span>Edit</span>
+            </button>
+        </div>
+        <div class="content">
+            <section class="profile-card">
+                <div class="icon">
+                    <img src="image/profile/icon.jpg" alt="プロフィール画像" class="profile-image">
+                    <div>
+                        <h2 class="name">梶田 優歩</h2>
+                        <p class="bio">データソリューション事業部</p>
+                    </div>
+                </div>
+
+                <div class="bubble">マッチングアプリを作りたい。誰か一緒にやりませんか？</div>
+
+                <div class="info">
+                    <p>いろんな人とお話したいです。</p>
+                    <h3>仕事</h3>
+                    <p>
+                        レコメンド作成してます。<br>
+                        使用ツールなど<br>
+                        ・GCP<br>
+                        ・SQL<br>
+                        ・Github<br>
+                        ・argo<br>
+                        詳しくはフォトギャラリー1枚目を見てください！
+                    </p>
+
+                    <h3>趣味</h3>
+                    <p>
+                        ・服つくり<br>
+                        　型紙から作成できます<br>
+                        ・旅行<br>
+                        　大阪によく行きます<br>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 画像ギャラリー -->
+            <section class="gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-image">
+                        <img src="image/profile/image1.png" alt="ギャラリー画像1" data-full="image/profile/image1.jpg">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="image/profile/image2.jpg" alt="ギャラリー画像2" data-full="image/profile/image2.jpg">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="image/profile/image3.jpg" alt="ギャラリー画像3" data-full="image/profile/image3.jpg">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="image/profile/image4.jpg" alt="ギャラリー画像1" data-full="image/profile/image4.jpg">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="image/profile/image5.jpg" alt="ギャラリー画像2" data-full="image/profile/image5.jpg">
+                    </div>
+                    <!-- 他の画像も同様に -->
+                </div>
+            </section>
+
+            <!-- モーダル用の要素 -->
+            <div class="modal" id="modal">
+                <span class="close" id="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+            
+
+            </div>
+        </div> 
+    </main>
+    
+</body>
+
+<script>
+    const images = document.querySelectorAll('.gallery-grid img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const close = document.getElementById('close');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            const fullImageSrc = image.getAttribute('data-full'); // クリックした画像のデータ属性を取得
+            modalImg.src = fullImageSrc; // モーダル画像のsrcを設定
+            modal.style.display = 'flex'; // モーダルを表示
+        });
+    });
+
+    close.addEventListener('click', () => {
+        modal.style.display = 'none'; // モーダルを非表示に
+    });
+
+    // モーダルの外側をクリックしても閉じる
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
+
+</html>
