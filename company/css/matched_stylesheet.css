@@ -61,8 +61,8 @@
 
 .algorithm-match-mark {
     display: inline-block; /* インラインブロックにして、テキストの周りに余白を追加 */
-    background-color: #ffcc00; /* 背景色を黄色に */
-    color: #000; /* 文字色を黒に */
+    background-color: #ff4081; /* 背景色を黄色に */
+    color: white; /* 文字色を黒に */
     padding: 5px 10px; /* 内側の余白を追加 */
     border-radius: 5px; /* 角を丸くする */
     margin-top: 5px; /* 上に少し余白を追加 */

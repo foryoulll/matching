@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>相手のプロフィール</title>
+    <title>random_match</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/common_stylesheet.css">
-    <link rel="stylesheet" href="css/algorithm_match_stylesheet.css">
+    <link rel="stylesheet" href="css/random_match_stylesheet.css">
 </head>
 <body>
     <header>
@@ -16,9 +16,9 @@
     </header>
     <main>
         <div class="attention">
-            <h1>algorithm match</h1>
-            <p>マッチングアルゴリズムに基づいて興味関心が近いお相手を紹介します</p>
-            <p>こちらは毎週月曜日0時に更新されます</p>
+            <h1>random match</h1>
+            <p>ランダムでペアを作成して紹介します</p>
+            <p>毎週月曜日0時に更新されます</p>
         </div>
         <div class="content">
             <section class="profile-card">
@@ -30,16 +30,19 @@
                     </div>
                 </div>
 
-                <div class="bubble">5月のファッションショーに参加予定。チケットほしい方ぜひ！</div>
+                <div class="bubble">医学療法を専攻している方とお話したいです。</div>
 
                 <div class="info">
                     <p>03"(21)<br>
-                       INFP
+                       INFP<br>
+                       <a href="https://www.instagram.com" target="_blank">
+                        @instagram
+                        </a>
                     </p>
                     <h3>専攻</h3>
                     <p>
                         服飾科<br>
-                        最初の画像2枚作った服の写真です
+                        身体障がいのある人に向けた服を作る勉強をしています。
                     </p>
 
                     <h3>趣味</h3>
@@ -73,16 +76,16 @@
             <div class="modal" id="modal">
                 <span class="close" id="close">&times;</span>
                 <img class="modal-content" id="modal-img">
-            
+
 
             </div>
-        </div> 
+        </div>
         <!-- 左下のグッドボタン -->
         <button class="good-button">
             <i class="fas fa-thumbs-up"></i>
         </button>
     </main>
-    
+
 </body>
 
 <script>
