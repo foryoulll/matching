@@ -59,7 +59,7 @@
             <section class="gallery">
                 <div class="gallery-grid">
                     <div class="gallery-image">
-                        <img src="image/profile/image1.png" alt="ギャラリー画像1" data-full="image/profile/image1.jpg">
+                        <img src="image/profile/image1.png" alt="ギャラリー画像1" data-full="image/profile/image1.png">
                     </div>
                     <div class="gallery-image">
                         <img src="image/profile/image2.jpg" alt="ギャラリー画像2" data-full="image/profile/image2.jpg">
@@ -79,11 +79,9 @@
 
             <!-- モーダル用の要素 -->
             <div class="modal" id="modal">
-                <span class="close" id="close">&times;</span>
                 <img class="modal-content" id="modal-img">
-            
-
             </div>
+
         </div> 
         <!-- 左下のグッドボタン -->
         <button class="good-button">
@@ -97,7 +95,6 @@
     const images = document.querySelectorAll('.gallery-grid img');
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
-    const close = document.getElementById('close');
 
     images.forEach(image => {
         image.addEventListener('click', () => {
@@ -107,11 +104,7 @@
         });
     });
 
-    close.addEventListener('click', () => {
-        modal.style.display = 'none'; // モーダルを非表示に
-    });
-
-    // モーダルの外側をクリックしても閉じる
+    // モーダルの外側をクリックして閉じる
     window.addEventListener('click', (event) => {
         if (event.target == modal) {
             modal.style.display = 'none';
