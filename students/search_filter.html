@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search filter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/common_stylesheet.css">
-    <link rel="stylesheet" href="css/search_filter_stylesheet.css">
+    <link rel="stylesheet" href="../css/common_stylesheet.css">
+    <link rel="stylesheet" href="../css/search_filter_stylesheet.css">
 </head>
 </head>
 
@@ -18,9 +18,11 @@
         </a>
     </header>
     <main>
+        <!--
         <div class="attention">
             <h1>フィルター検索</h1>
         </div>
+        -->
 
         <div class="content">
             <div class="filter-container">
@@ -39,17 +41,17 @@
                     </div>
                 </div>
 
-                <!-- 学部フィルター -->
+                <!-- 部署フィルター -->
                 <div class="filter-group department-group">
                     <label for="department">
                         <h3>department:</h3>
                     </label>
                     <select id="department">
                         <option value="">選択してください</option>
-                        <option value="経済学部">経済学部</option>
-                        <option value="医学部">医学部</option>
-                        <option value="教育学部">教育学部</option>
-                        <option value="農学部">農学部</option>
+                        <option value="営業">営業</option>
+                        <option value="開発">開発</option>
+                        <option value="マーケティング">マーケティング</option>
+                        <option value="人事">人事</option>
                     </select>
                 </div>
 
@@ -58,42 +60,60 @@
                     <label>
                         <h3>MBTI:</h3>
                     </label>
-                    <label><input type="checkbox" id="mbti-all" onclick="toggleMBTI(this)">不問</label>
+                    <input type="checkbox" id="mbti-all" onclick="toggleMBTI(this)">
+                    <label for="mbti-all">不問</label>
+
                     <div id="mbti-options">
                         <div>
                             <label>エネルギーの方向</label>
                             <div class="mbti-index-group">
-                                <label class="mbti-index"><input type="radio" name="mbti-2" value="I">I（内向的型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-2" value="E">E（外交型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-2" value="X"
-                                        checked>X（どちらでもない・不問）</label>
+                                <input type="radio" id="mbti-i" name="mbti-2" value="I">
+                                <label for="mbti-i">I（内向型）</label>
+                                
+                                <input type="radio" id="mbti-e" name="mbti-2" value="E">
+                                <label for="mbti-e">E（外交型）</label>
+                                
+                                <input type="radio" id="mbti-x2" name="mbti-2" value="X" checked>
+                                <label for="mbti-x2">X（どちらでもない・不問）</label>
                             </div>
                         </div>
                         <div>
                             <label>ものの見方</label>
                             <div class="mbti-index-group">
-                                <label class="mbti-index"><input type="radio" name="mbti-3" value="N">N（直感型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-3" value="S">S（感覚型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-3" value="X"
-                                        checked>X（どちらでもない・不問）</label>
+                                <input type="radio" id="mbti-n" name="mbti-3" value="N">
+                                <label for="mbti-n">N（直感型）</label>
+
+                                <input type="radio" id="mbti-s" name="mbti-3" value="S">
+                                <label for="mbti-s">S（感覚型）</label>
+
+                                <input type="radio" id="mbti-x3" name="mbti-3" value="X" checked>
+                                <label for="mbti-x3">X（どちらでもない・不問）</label>
                             </div>
                         </div>
                         <div>
                             <label>判断の仕方</label>
                             <div class="mbti-index-group">
-                                <label class="mbti-index"><input type="radio" name="mbti-4" value="T">T（思考型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-4" value="F">F（感情型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-4" value="X"
-                                        checked>X（どちらでもない・不問）</label>
+                                <input type="radio" id="mbti-t" name="mbti-4" value="T">
+                                <label for="mbti-t">T（思考型）</label>
+
+                                <input type="radio" id="mbti-f" name="mbti-4" value="F">
+                                <label for="mbti-f">F（感情型）</label>
+
+                                <input type="radio" id="mbti-x4" name="mbti-4" value="X" checked>
+                                <label for="mbti-x4">X（どちらでもない・不問）</label>
                             </div>
                         </div>
                         <div>
                             <label>外部との接し方</label>
                             <div class="mbti-index-group">
-                                <label class="mbti-index"><input type="radio" name="mbti-5" value="P">P（知覚型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-5" value="J">J（判断型）</label>
-                                <label class="mbti-index"><input type="radio" name="mbti-5" value="X"
-                                        checked>X（どちらでもない・不問）</label>
+                                <input type="radio" id="mbti-p" name="mbti-5" value="P">
+                                <label for="mbti-p">P（知覚型）</label>
+
+                                <input type="radio" id="mbti-j" name="mbti-5" value="J">
+                                <label for="mbti-j">J（判断型）</label>
+
+                                <input type="radio" id="mbti-x5" name="mbti-5" value="X" checked>
+                                <label for="mbti-x5">X（どちらでもない・不問）</label>
                             </div>
                         </div>
                     </div>
@@ -121,14 +141,36 @@
             document.getElementById("age-max-display").textContent = document.getElementById("age-max").value;
         }
 
-        function toggleAllMBTI(checkbox) {
-            const mbtiCheckboxes = document.querySelectorAll('input[name="mbti"]');
-            if (checkbox.checked) {
-                mbtiCheckboxes.forEach(cb => cb.checked = true);
+        // 不問チェックボックスのクリック時
+        function toggleMBTI(allCheckbox) {
+            const mbtiOptions = document.querySelectorAll('input[type="radio"][value="X"]');
+        
+            if (allCheckbox.checked) {
+                // 不問がチェックされたら全ての"X"ラジオボタンを選択
+                mbtiOptions.forEach(option => {
+                    option.checked = true;
+                });
             } else {
-                mbtiCheckboxes.forEach(cb => cb.checked = false);
+                // 不問が外れたら全ての"X"ラジオボタンをクリア（必要に応じてここを調整）
+                mbtiOptions.forEach(option => {
+                    option.checked = false;
+                });
             }
         }
+
+        // 各MBTIオプションのラジオボタンがクリックされたとき
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                const allCheckbox = document.getElementById('mbti-all');
+                // 全ての"X"が選択されているかを確認
+                const allXChecked = Array.from(document.querySelectorAll('.mbti-index-group input[type="radio"][value="X"]'))
+                    .every(radio => radio.checked);
+            
+                // 全ての"X"がチェックされていれば不問をチェック、それ以外なら外す
+                allCheckbox.checked = allXChecked;
+            });
+        });
+
 
         function applyFilters() {
             const ageMin = document.getElementById("age-min").value;

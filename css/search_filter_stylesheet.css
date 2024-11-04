@@ -79,21 +79,21 @@
     width: 20px; /* つまみの幅 */
     height: 20px; /* つまみの高さ */
     border-radius: 50%; /* つまみを丸く */
-    background: #ff4081; /* つまみの色 */
+    background: #2a2e50; /* つまみの色 */
     cursor: pointer; /* マウスカーソルをポインタに */
 }
 .age-group input[type="range"]::-moz-range-thumb {
     width: 20px; /* つまみの幅 */
     height: 20px; /* つまみの高さ */
     border-radius: 50%; /* つまみを丸く */
-    background: #ff4081; /* つまみの色 */
+    background: #2a2e50; /* つまみの色 */
     cursor: pointer; /* マウスカーソルをポインタに */
 }
 .age-group input[type="range"]::-ms-thumb {
     width: 20px; /* つまみの幅 */
     height: 20px; /* つまみの高さ */
     border-radius: 50%; /* つまみを丸く */
-    background: #ff4081; /* つまみの色 */
+    background: #2a2e50; /* つまみの色 */
     cursor: pointer; /* マウスカーソルをポインタに */
 }
 
@@ -111,24 +111,72 @@
     background-position: right 10px center; /* 矢印の位置を設定 */
 }
 .department-group :focus {
-    border-color: #ff4081; /* フォーカス時の境界線の色 */
+    border-color: #2a2e50; /* フォーカス時の境界線の色 */
     outline: none; /* アウトラインを消す */
 }
-
 
 /* MBTIフィルター */
 .mbti-index-group {
     display: flex; /* flexboxを使用して横並びに */
     align-items: center; /* 垂直方向に中央揃え */
     margin-top: 10px; /* 上部にスペースを追加 */
-}
-.mbti-index {
-    margin-right: 20px; /* 各ラベルの間隔を調整 */
-}
-label {
-    font-weight: bold; /* グループラベルを太字に */
+    border-bottom: 1px solid #ccc; /* 下線を設定 */
+    padding-bottom: 10px; /* 下側の余白を追加してテキストが境界に近づかないようにする */
+    margin-bottom: 15px; /* 次のグループとの間隔 */
 }
 
+/* チェックボックスとラジオボタンのカスタムスタイル */
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none; /* デフォルトのチェックボックス・ラジオボタンを隠す */
+    appearance: none; /* デフォルトスタイルを無効化 */
+}
+
+.mbti-index-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+/* カスタムチェックボックス */
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #2a2e50;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+input[type="radio"] + label::before {
+    border-radius: 50%; /* ラジオボタンは丸に */
+}
+
+/* チェックボックスのチェック状態 */
+input[type="checkbox"]:checked + label::before {
+    background-color: #2a2e50;
+    border-color: #2a2e50;
+    content: '\2713'; /* チェックマークを表示 */
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ラジオボタンのチェック状態 */
+input[type="radio"]:checked + label::before {
+    background-color: #2a2e50;
+    border-color: #2a2e50;
+    content: '';
+}
+
+/* 検索ボタン */
 button {
     padding: 10px 15px;
     background-color: #333f5f;

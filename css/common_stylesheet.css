@@ -22,7 +22,7 @@ header {
     width: 100%;
     padding: 1rem;
     text-align: center;
-    z-index: 1000;
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.7); /* 少し透明感を加えた黒背景 */
     height: 100px;
 }

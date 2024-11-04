@@ -1,10 +1,7 @@
 /* slackボタン */
 .slack-button {
-    position: fixed; /* 固定配置 */
-    left: 15%; /* 左からの距離 */
-    bottom: 30px; /* 下からの距離 */
-    background-color: #fff;
-    color: black;
+    background-color: #ff4081; /* 背景色を黄色に */
+    color: #fff;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -14,9 +11,17 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 少し影を追加して浮き上がらせる */
 }
 
 .slack-button:hover {
     background-color: gray;
+}
+
+.slack-button a {
+    color: #fff;
+}
+
+.slack-button a:visited {
+    color: #fff;
 }

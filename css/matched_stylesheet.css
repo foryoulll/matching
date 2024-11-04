@@ -44,8 +44,9 @@
     object-fit: cover; /* 画像が引き延ばされないように */}
 
 .friend-info {
-    display: flex; /* フレックスボックスで配置 */
-    align-items: center; /* 垂直方向の中央揃え */
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: space-between; /* テキストとアイコンを左右に配置 */
+    width: 100%; /* 残りのスペースを占有 */
 }
 
 .friend-info h3 {
@@ -56,4 +57,26 @@
 .friend-info p {
     color: #666;
     margin-top: 0.5rem;
+}
+
+.random-match-mark {
+    display: inline-block; /* インラインブロックにして、テキストの周りに余白を追加 */
+    color: #ff4081;
+    padding: 5px 10px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+
+    border: 2px solid #ff4081;  /* 枠の太さ、スタイル、色を設定 */
+    border-radius: 5px;       /* 角を丸くしたい場合はこのプロパティを追加 */
+}
+
+.icons {
+    display: flex; /* アイコンを横並びにする */
+    gap: 10px; /* アイコン間のスペース */
+    align-items: center; /* アイコンを垂直方向に中央揃え */
+}
+
+.slack-button a {
+    color: #fff;
 }
